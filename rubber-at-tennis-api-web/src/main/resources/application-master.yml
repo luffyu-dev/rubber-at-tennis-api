@@ -1,0 +1,9 @@
+rubber:
+  proxy:
+    config:
+      db-instances:
+        at_tennis_db:
+          driverClassName: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://gz-cdb-9mqj3ij3.sql.tencentcdb.com:27463/at_tennis?useUnicode=true&characterEncoding=utf8
+          username: root
+          password: Ygf@772197

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>rubber-at-tennis-api</artifactId>
+        <groupId>com.rubber</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>rubber-at-tennis-api-web</artifactId>
+    <name>rubber-at-tennis-api-web</name>
+
+
+
+    <dependencies>
+
+
+        <dependency>
+            <groupId>com.rubber</groupId>
+            <artifactId>base_mysql</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.rubber</groupId>
+            <artifactId>rubber_basic_web_boot_start</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>3.1.0</version>
+            <scope>test</scope>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.rubber</groupId>
+            <artifactId>rubber-at-tennis-atp-service</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.rubber</groupId>
+            <artifactId>rubber-at-tennis-map-service</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.rubber</groupId>
+            <artifactId>rubber-at-tennis-invite-service</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.rubber.user</groupId>
+            <artifactId>rubber_user_service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <!-- 此处为程序主入口，不带后缀 -->
+                            <mainClass>com.rubber.at.tennis.api.web.RubberAtTennisApiWebApplication</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+</project>

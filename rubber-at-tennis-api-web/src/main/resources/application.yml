@@ -1,0 +1,15 @@
+server:
+  port:  38024
+  servlet:
+    context-path: /at-api
+
+spring:
+  application:
+    name: rubber-at-tennis-api
+  profiles:
+    active: master
+  jackson:
+    date-format:  "yyyy-MM-dd HH:mm:ss"
+    time-zone: "GMT+08:00"
+    default-property-inclusion: non_empty
+
